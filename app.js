@@ -16,7 +16,7 @@ import globalRouter from './routers/globalRouter';
 import './passport';
 const app = express ();
 
-const CookieStore = MongoStore (session);
+const CokieStore = MongoStore (session);
 
 app.use (helmet ());
 app.set ('view engine', 'pug');
@@ -31,7 +31,7 @@ app.use (
     secret: process.env.COOKIE_SECRET,
     resave: true,
     saveUninitialized: false,
-    store: new CookieStore ({
+    store: new CokieStore ({
       mongooseConnection: mongoose.connection,
     }),
   })

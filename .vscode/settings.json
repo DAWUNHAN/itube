@@ -1,0 +1,6 @@
+{
+  "prettier.spaceParenthesis": false,
+  "prettier.bracketSpacing": false,
+  "editor.formatOnSave": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false
+}
