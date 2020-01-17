@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const VideoSchema = new mongoose.Schema ({
   fileUrl: {
     type: String,
@@ -7,7 +6,7 @@ const VideoSchema = new mongoose.Schema ({
   },
   title: {
     type: String,
-    required: 'Title is required',
+    required: 'Tilte is required',
   },
   description: String,
   views: {
