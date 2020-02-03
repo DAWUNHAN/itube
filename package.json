@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "D.A Han",
   "license": "ISC",
+  "engins": {
+    "node": "12.14.1",
+    "npm": "6.13.4"
+  },
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
