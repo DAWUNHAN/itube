@@ -28,21 +28,6 @@ export const search = async (req, res) => {
 export const getUpload = (req, res) =>
   res.render('upload', {pageTitle: 'Upload'});
 
-// export const postUpload = async (req, res) => {
-//   const {
-//     body: {title, description},
-//     file: {location},
-//   } = req;
-//   const newVideo = await Video.create({
-//     fileUrl: location,
-//     title,
-//     description,
-//     creator: req.user._id,
-//   });
-//   req.user.videos.push(newVideo.id);
-//   req.user.save;
-//   res.redirect(routes.videoDetail(newVideo._id));
-// };
 export const postUpload = async (req, res) => {
   const {
     body: {title, description},
@@ -54,13 +39,9 @@ export const postUpload = async (req, res) => {
     description,
     creator: req.user._id,
   });
-  try {
-    req.user.videos.push(newVideo.id);
-    req.user.save;
-    res.redirect(routes.videoDetail(newVideo._id));
-  } catch (error) {
-    res.redirect(routes.home);
-  }
+  req.user.videos.push(newVideo.id);
+  req.user.save;
+  res.redirect(routes.videoDetail(newVideo._id));
 };
 
 export const videoDetail = async (req, res) => {
