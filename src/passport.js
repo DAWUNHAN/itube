@@ -8,21 +8,23 @@ import {
 } from './controllers/userController';
 import routes from './routes';
 
-passport.use (User.createStrategy ());
+passport.use(User.createStrategy());
 
-passport.use (
-  new GithubStrategy (
+passport.use(
+  new GithubStrategy(
     {
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
-      callbackURL: `http://localhost:5000${routes.githubCallback}`,
+      callbackURL: process.env.PRODUCTION
+        ? `http://agile-badlands-95319.herokuapp.com${routes.githubCallback}`
+        : `http://localhost:4000${routes.githubCallback}`,
     },
     githubLoginCallback
   )
 );
 
-passport.use (
-  new FacebookStrategy (
+passport.use(
+  new FacebookStrategy(
     {
       clientID: process.env.FB_ID,
       clientSecret: process.env.FB_SECRET,
@@ -37,5 +39,5 @@ passport.use (
 // passport.serializeUser (User.serializeUser ());
 // passport.deserializeUser (User.deserializeUser ());
 
-passport.serializeUser ((user, done) => done (null, user));
-passport.deserializeUser ((user, done) => done (null, user));
+passport.serializeUser((user, done) => done(null, user));
+passport.deserializeUser((user, done) => done(null, user));
