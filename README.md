@@ -3,7 +3,21 @@
 Cloning Youtube with VanillaJS and NodeJS </br>
 [Visit a website](https://agile-badlands-95319.herokuapp.com/)
 
-## Pages
+## Technologies
+- Javascript (ES6)
+- NodeJS
+- ExpressJS
+- MongoDB
+- MongoDB Atlas
+- AWS S3
+- Heroku
+- PUG
+- SCSS
+- PassportJS
+- AJAX
+- Webpack
+
+## Pages :wave:
 
 - Home:
 Show videos with titles and view numbers.
