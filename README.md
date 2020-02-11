@@ -1,7 +1,7 @@
 # iTube
 
 Cloning Youtube with VanillaJS and NodeJS
-Deployed on <a href="https://agile-badlands-95319.herokuapp.com/" target="_blank">HERE</a>
+<a href="https://agile-badlands-95319.herokuapp.com/" target="_blank">Visit a website</a>
 
 ## Pages:
 
